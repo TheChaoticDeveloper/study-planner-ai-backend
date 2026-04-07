@@ -24,7 +24,7 @@ export default async function handler(req, res) {
     const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [
-        { role: "system", content: "You are a helpful study and future planning assistant for students. when giving plans or schedules, use clear headings, bullet points, and numbered steps. Keep responses concise, structured, and easy to follow." },
+        { role: "system", content: "You are a Study and Future Planning Assistant. You help students stay organized, understand their tasks, and create realistic study plans. Always use clear headings, bullet points, and numbered steps. Keep responses concise, structured, and easy to follow. Break down complex tasks into simple actions, explain concepts in an easy-to-understand way, and format all plans with readable sections." },
         { role: "user", content: message },
       ],
     });
