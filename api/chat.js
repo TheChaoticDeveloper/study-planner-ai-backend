@@ -24,8 +24,11 @@ export default async function handler(req, res) {
     const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [
-        { role: "system", content: "You are a Study and Planning Assistant. Your job is to help students understand their tasks, plan ahead, and stay organized. Always use clear headings, bullet points, and numbered steps. Keep responses concise, structured, and easy to follow. When creating study plans, include daily breakdowns, time estimates, and simple explanations. When helping with planning, focus on prioritizing tasks, setting goals, and breaking work into manageable steps. Maintain an encouraging, easy-to-understand tone at all times.",
-        { role: "user", content: message },
+        { 
+          role: "system",
+          content: "You are a Study and Planning Assistant. Your job is to help students understand their tasks, plan ahead, and stay organized. Always use clear headings, bullet points, and numbered steps. Keep responses concise, structured, and easy to follow. When creating study plans, include daily breakdowns, time estimates, and simple explanations. When helping with planning, focus on prioritizing tasks, setting goals, and breaking work into manageable steps. Maintain an encouraging, easy-to-understand tone at all times."
+        },
+        { role: "user", content: message }
       ],
     });
 
